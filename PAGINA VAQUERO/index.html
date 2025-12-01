@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pirotécnicos El Vaquero – Catálogo y Shows</title>
+  <meta name="description" content="Catálogo de venta al público de Pirotécnicos El Vaquero y opción de shows pirotécnicos profesionales.">
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-soft: #0b1220;
+      --bg-softer: #020617;
+      --accent: #f97316;
+      --accent-soft: rgba(249,115,22,0.16);
+      --accent-strong: #fb923c;
+      --accent-alt: #facc15;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: rgba(148,163,184,0.4);
+      --danger: #f97373;
+      --radius-xl: 22px;
+      --radius-lg: 16px;
+      --shadow-soft: 0 18px 45px rgba(0,0,0,0.55);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, #1f2937 0, transparent 55%),
+        radial-gradient(circle at bottom right, #4b5563 0, transparent 60%),
+        linear-gradient(135deg, #020617, #020617);
+      color: var(--text);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(2,6,23,0.95), rgba(2,6,23,0.7));
+      border-bottom: 1px solid rgba(148,163,184,0.35);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.7rem 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at 30% 10%, #ffffff 0, #fee2e2 16%, transparent 45%),
+        radial-gradient(circle at 65% 80%, #f97316 0, #b91c1c 60%, #020617 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(248,250,252,0.4);
+    }
+
+    .brand-text-title {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .brand-text-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.3rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 0.15rem;
+      color: var(--muted);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      border-radius: 999px;
+      background: linear-gradient(to right, var(--accent), var(--accent-alt));
+      transition: width 0.18s ease-out;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-nav {
+      padding: 0.45rem 0.9rem;
+      font-size: 0.82rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      cursor: pointer;
+      background: rgba(15,23,42,0.9);
+      color: var(--text);
+    }
+
+    .btn-nav span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 10px rgba(34,197,94,0.8);
+    }
+
+    .btn-nav:hover {
+      background: rgba(15,23,42,1);
+    }
+
+    /* MAIN LAYOUT */
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.8rem 1.3rem 3.5rem;
+    }
+
+    section {
+      margin-top: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+      max-width: 46rem;
+    }
+
+    /* HERO */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(270px, 2.2fr);
+      gap: 2.2rem;
+      padding: 2.4rem 2rem;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at top left, rgba(248,250,252,0.08), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(248,250,252,0.05), transparent 65%),
+        linear-gradient(135deg, rgba(15,23,42,0.98), rgba(15,23,42,0.96));
+      border: 1px solid rgba(148,163,184,0.4);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 30% -30% -80%;
+      background:
+        radial-gradient(circle at 10% -20%, rgba(248,113,22,0.7), transparent 55%),
+        radial-gradient(circle at 100% 120%, rgba(250,204,21,0.45), transparent 55%);
+      opacity: 0.16;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent-alt);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-kicker span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(248,113,22,0.9);
+    }
+
+    .hero-title {
+      font-size: clamp(2.1rem, 3.1vw + 0.8rem, 2.9rem);
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      line-height: 1.05;
+      margin: 0 0 0.7rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(to right, var(--accent), var(--accent-strong), var(--accent-alt));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 32rem;
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .hero-pill {
+      font-size: 0.78rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.95);
+      color: var(--muted);
+      border: 1px solid rgba(148,163,184,0.65);
+    }
+
+    .hero-pill strong {
+      color: var(--accent-strong);
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      padding: 0.8rem 1.4rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-alt));
+      color: #111827;
+      box-shadow: 0 16px 40px rgba(248,113,22,0.6);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(148,163,184,0.7);
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      background: rgba(15,23,42,0.96);
+    }
+
+    .hero-note {
+      margin-top: 1.1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      max-width: 32rem;
+    }
+
+    .hero-note span {
+      color: var(--danger);
+      font-weight: 600;
+    }
+
+    .hero-card {
+      position: relative;
+      z-index: 1;
+      background:
+        radial-gradient(circle at 10% -10%, rgba(248,250,252,0.06), transparent 60%),
+        rgba(15,23,42,0.98);
+      border-radius: 24px;
+      border: 1px solid rgba(148,163,184,0.55);
+      padding: 1.3rem 1.3rem 1.1rem;
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .hero-card-title {
+      font-size: 0.9rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .hero-card-main {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .hero-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .hero-metric {
+      padding: 0.6rem 0.7rem;
+      border-radius: 14px;
+      background: rgba(15,23,42,0.98);
+      border: 1px solid rgba(148,163,184,0.45);
+      font-size: 0.8rem;
+    }
+
+    .hero-metric-label {
+      color: var(--muted);
+      margin-bottom: 0.1rem;
+    }
+
+    .hero-metric-value {
+      font-weight: 600;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      font-size: 0.78rem;
+    }
+
+    .hero-tag {
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(248,113,22,0.6);
+    }
+
+    /* CATÁLOGO */
+
+    #catalogo {
+      margin-top: 3rem;
+    }
+
+    .catalogo-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: flex-end;
+      margin-bottom: 1.4rem;
+    }
+
+    .catalogo-meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .catalogo-meta strong {
+      color: var(--accent-strong);
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr) minmax(0, 1.2fr);
+      gap: 0.9rem;
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius-xl);
+      background: radial-gradient(circle at top, rgba(15,23,42,0.85), rgba(15,23,42,0.98));
+      border: 1px solid rgba(148,163,184,0.4);
+      box-shadow: 0 14px 36px rgba(15,23,42,0.8);
+    }
+
+    .field {
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    .field label {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.95);
+      color: var(--text);
+      font-size: 0.86rem;
+      padding: 0.45rem 0.75rem;
+      outline: none;
+    }
+
+    .field input:focus,
+    .field select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(248,113,22,0.6);
+    }
+
+    .product-grid {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.1rem;
+    }
+
+    .product-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      padding: 0.9rem 0.95rem 0.9rem;
+      background: linear-gradient(145deg, rgba(15,23,42,0.98), rgba(15,23,42,0.94));
+      border: 1px solid rgba(148,163,184,0.45);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .product-card::before {
+      content: "";
+      position: absolute;
+      inset: -20% 40% auto auto;
+      width: 80%;
+      height: 70%;
+      background:
+        radial-gradient(circle at top right, rgba(248,113,22,0.28), transparent 60%);
+      opacity: 0.18;
+      pointer-events: none;
+    }
+
+    .product-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* MINI FOTO DEL PRODUCTO */
+
+    .product-thumb {
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 0.6rem;
+      background: radial-gradient(circle at center, #111827 0, #020617 60%);
+      border: 1px solid rgba(148,163,184,0.5);
+    }
+
+    .product-thumb img {
+      display: block;
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .product-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .product-chip {
+      font-size: 0.74rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.98);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .product-shots {
+      font-size: 0.72rem;
+      padding: 0.18rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(6,78,59,0.15);
+      border: 1px solid rgba(45,212,191,0.7);
+      color: #a5f3fc;
+      white-space: nowrap;
+    }
+
+    .product-name {
+      font-size: 0.97rem;
+      font-weight: 600;
+      margin: 0.25rem 0 0.2rem;
+    }
+
+    .product-price {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--accent-alt);
+      margin-bottom: 0.4rem;
+    }
+
+    .product-badge-publico {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .product-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+      margin-top: 0.2rem;
+    }
+
+    .btn-ghost,
+    .btn-outline-small {
+      border-radius: 999px;
+      font-size: 0.75rem;
+      padding: 0.3rem 0.65rem;
+      border: 1px solid rgba(148,163,184,0.65);
+      background: rgba(15,23,42,0.9);
+      color: var(--text);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .btn-ghost:hover,
+    .btn-outline-small:hover {
+      background: rgba(15,23,42,1);
+    }
+
+    .product-no-video {
+      font-size: 0.74rem;
+      color: var(--muted);
+    }
+
+    .product-video {
+      margin-top: 0.6rem;
+      display: none;
+    }
+
+    .product-video.visible {
+      display: block;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(148,163,184,0.5);
+      background: #020617;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .no-results {
+      margin-top: 1.4rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* COLORES POR CATEGORÍA */
+
+    .product-card[data-category="torta"] .product-chip {
+      border-color: rgba(248,113,22,0.9);
+      background: rgba(248,113,22,0.12);
+      color: #fed7aa;
+    }
+
+    .product-card[data-category="bengala"] .product-chip {
+      border-color: rgba(56,189,248,0.9);
+      background: rgba(56,189,248,0.14);
+      color: #bae6fd;
+    }
+
+    .product-card[data-category="volcan"] .product-chip {
+      border-color: rgba(96,165,250,0.9);
+      background: rgba(37,99,235,0.2);
+      color: #bfdbfe;
+    }
+
+    .product-card[data-category="fuente"] .product-chip {
+      border-color: rgba(22,163,74,0.9);
+      background: rgba(22,163,74,0.16);
+      color: #bbf7d0;
+    }
+
+    .product-card[data-category="trueno"] .product-chip {
+      border-color: rgba(248,250,252,0.7);
+      background: rgba(15,23,42,0.9);
+      color: #e5e7eb;
+    }
+
+    /* SERVICIOS (SHOWS) */
+
+    .servicios-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 1.5rem;
+    }
+
+    .resaltado {
+      padding: 1rem 1rem;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at top, rgba(15,23,42,0.88), rgba(15,23,42,0.98));
+      border: 1px solid rgba(148,163,184,0.45);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .resaltado h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .resaltado ul {
+      margin: 0.1rem 0 0;
+      padding-left: 1.1rem;
+    }
+
+    .resaltado li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* CONTACTO */
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+      gap: 1.5rem;
+      margin-top: 0.7rem;
+    }
+
+    .contact-block {
+      padding: 1rem 1rem;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at top left, rgba(15,23,42,0.85), rgba(15,23,42,0.98));
+      border: 1px solid rgba(148,163,184,0.5);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .contact-block h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .contact-channels {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 0.6rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .pill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.55);
+      background: rgba(15,23,42,0.98);
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+
+    .pill-link span.icon {
+      width: 18px;
+      text-align: center;
+    }
+
+    form {
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    form label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.15rem;
+      display: block;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.98);
+      color: var(--text);
+      font-size: 0.86rem;
+      padding: 0.55rem 0.7rem;
+      outline: none;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(248,113,22,0.6);
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-footnote {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(148,163,184,0.4);
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 960px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding-inline: 1.4rem;
+      }
+      .hero-card {
+        order: -1;
+      }
+      .servicios-layout,
+      .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .toolbar {
+        grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
+      }
+    }
+
+    @media (max-width: 780px) {
+      .nav-links {
+        display: none;
+      }
+      .nav-cta {
+        display: none;
+      }
+      .hero {
+        padding: 1.6rem 1.2rem;
+      }
+      main {
+        padding-inline: 1rem;
+      }
+      .toolbar {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <div class="brand">
+      <div class="brand-logo">V</div>
+      <div>
+        <div class="brand-text-title">Pirot&eacute;cnicos El Vaquero</div>
+        <div class="brand-text-sub">Venta al p&uacute;blico y shows profesionales</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Cat&aacute;logo</a>
+      <a href="#servicios">Shows</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="nav-cta">
+      <button class="btn-nav" onclick="document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})">
+        <span class="dot"></span>
+        Ver productos
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <div class="hero-kicker">
+        <span class="dot"></span> Venta al p&uacute;blico &amp; shows pirot&eacute;cnicos
+      </div>
+      <h1 class="hero-title">
+        Cat&aacute;logo de pirotecnia
+        <span>para tus celebraciones</span>
+      </h1>
+      <p class="hero-subtitle">
+        Pirot&eacute;cnicos El Vaquero ofrece productos pirot&eacute;cnicos de venta al p&uacute;blico y, si lo necesitas,
+        shows profesionales para eventos especiales. Desde bengalas y volcanes hasta tortas de m&uacute;ltiples tiros.
+      </p>
+      <div class="hero-pills">
+        <span class="hero-pill"><strong>Venta al p&uacute;blico:</strong> elige tus productos y pregunta disponibilidad.</span>
+        <span class="hero-pill"><strong>Shows:</strong> solo con personal autorizado y espacios adecuados.</span>
+        <span class="hero-pill"><strong>Mayor seguridad:</strong> enfoque en uso responsable y legal.</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#catalogo" class="btn btn-primary">
+          Ver cat&aacute;logo completo 🔥
+        </a>
+        <a href="#contacto" class="btn btn-outline">
+          Pedir informaci&oacute;n de compra
+        </a>
+      </div>
+      <p class="hero-note">
+        <span>Importante:</span> la venta y manipulaci&oacute;n de productos pirot&eacute;cnicos es exclusivamente para
+        <strong>mayores de edad</strong> y debe hacerse siguiendo la normatividad vigente y las indicaciones de seguridad.
+      </p>
+    </div>
+
+    <aside class="hero-card">
+      <div class="hero-card-title">Resumen r&aacute;pido</div>
+      <div class="hero-card-main">
+        Explica a tus clientes qu&eacute; productos manejas, sus precios y c&oacute;mo contactarte para hacer el pedido.
+      </div>
+      <div class="hero-card-grid">
+        <div class="hero-metric">
+          <div class="hero-metric-label">Enfocado en</div>
+          <div class="hero-metric-value">Venta al p&uacute;blico y tortas por n&uacute;mero de tiros</div>
+        </div>
+        <div class="hero-metric">
+          <div class="hero-metric-label">Atenci&oacute;n</div>
+          <div class="hero-metric-value">WhatsApp &amp; correo</div>
+        </div>
+        <div class="hero-metric">
+          <div class="hero-metric-label">Tipos de producto</div>
+          <div class="hero-metric-value">Bengalas, volcanes, tortas, misiles y m&aacute;s</div>
+        </div>
+        <div class="hero-metric">
+          <div class="hero-metric-label">Shows</div>
+          <div class="hero-metric-value">Opcionales para eventos especiales</div>
+        </div>
+      </div>
+      <div class="hero-tags">
+        <span class="hero-tag">Cat&aacute;logo para consulta r&aacute;pida</span>
+        <span class="hero-tag">Clasificaci&oacute;n de tortas por tiros</span>
+        <span class="hero-tag">Opci&oacute;n de video demostraci&oacute;n</span>
+      </div>
+    </aside>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section id="catalogo">
+    <div class="catalogo-header">
+      <div>
+        <h2 class="section-title">Cat&aacute;logo de productos</h2>
+        <p class="section-subtitle">
+          Estos productos son de <strong>venta al p&uacute;blico</strong>. Elige tus referencias, revisa el precio y
+          agr&eacute;galas a tu lista para luego escribir por WhatsApp o correo y confirmar disponibilidad.
+        </p>
+      </div>
+      <div class="catalogo-meta">
+        Filtra por <strong>categor&iacute;a</strong> o por <strong>n&uacute;mero de tiros</strong> en el caso de las tortas.
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="field">
+        <label for="searchInput">Buscar producto por nombre</label>
+        <input id="searchInput" type="search" placeholder="Ej: TORTA AFRICA, BENGALA, VOLCAN..." />
+      </div>
+      <div class="field">
+        <label for="categoryFilter">Categor&iacute;a</label>
+        <select id="categoryFilter">
+          <option value="all">Todas las categor&iacute;as</option>
+          <option value="torta">Tortas (bater&iacute;as)</option>
+          <option value="bengala">Bengalas</option>
+          <option value="volcan">Volcanes</option>
+          <option value="fuente">Fuentes</option>
+          <option value="misil">Misiles</option>
+          <option value="mortero">Morteros / palmeras</option>
+          <option value="trueno">Truenos / sonido</option>
+          <option value="otros">Otros</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="shotsFilter">Tiros (solo tortas)</label>
+        <select id="shotsFilter">
+          <option value="all">Todas las tortas</option>
+          <option value="hasta25">Hasta 25 tiros</option>
+          <option value="26a49">De 26 a 49 tiros</option>
+          <option value="50a119">De 50 a 119 tiros</option>
+          <option value="120plus">120 tiros o m&aacute;s</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="productGrid" class="product-grid"></div>
+  </section>
+
+  <!-- SERVICIOS / SHOWS -->
+  <section id="servicios">
+    <h2 class="section-title">Shows pirot&eacute;cnicos profesionales (opcional)</h2>
+    <p class="section-subtitle">
+      Adem&aacute;s de la venta al p&uacute;blico, puedes ofrecer shows pirot&eacute;cnicos profesionales para clientes
+      que quieran algo m&aacute;s completo. Estos shows se realizan solo con personal capacitado y en lugares que lo permitan.
+    </p>
+
+    <div class="servicios-layout">
+      <div class="resaltado">
+        <h3>Ejemplos de shows que puedes ofrecer</h3>
+        <ul>
+          <li><strong>Bodas:</strong> entrada de los novios, vals con bengalas y cierre con tortas de distintos tiros.</li>
+          <li><strong>Eventos empresariales:</strong> aniversarios, lanzamientos o celebraciones especiales.</li>
+          <li><strong>Grados y fiestas:</strong> combinando bengalas, volcanes y tortas de diferentes alturas.</li>
+        </ul>
+        <p style="margin-top:0.6rem;">
+          Siempre debes revisar si el sitio permite pirotecnia, mantener las distancias de seguridad y contar con permisos
+          seg&uacute;n la normatividad local.
+        </p>
+      </div>
+      <div class="resaltado">
+        <h3>Recordatorio de seguridad</h3>
+        <ul>
+          <li>Solo mayores de edad pueden comprar y manipular pirotecnia.</li>
+          <li>No usar cerca de personas, cables, techos, veh&iacute;culos ni material inflamable.</li>
+          <li>No modificar los productos ni usarlos diferente a lo indicado por el proveedor.</li>
+          <li>En shows, siempre debe estar presente personal con experiencia.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <h2 class="section-title">Contacto y pedidos</h2>
+    <p class="section-subtitle">
+      Dile a tus clientes que primero elijan sus productos en el cat&aacute;logo (pueden usar el bot&oacute;n
+      <strong>&ldquo;A&ntilde;adir a mi lista&rdquo;</strong>) y luego te escriban para confirmar precios y disponibilidad.
+    </p>
+
+    <div class="contact-layout">
+      <div class="contact-block">
+        <h3>Canales de contacto</h3>
+        <p>
+          Usa estos datos como ejemplo y reempl&aacute;zalos por tu informaci&oacute;n real de El Vaquero (celular, correo, etc.).
+        </p>
+
+        <div class="contact-channels">
+          <a class="pill-link" href="https://wa.me/573000000000" target="_blank" rel="noopener">
+            <span class="icon">💬</span>
+            WhatsApp: +57 300 000 00 00
+          </a>
+          <a class="pill-link" href="mailto:contacto@elvaquero.com">
+            <span class="icon">📧</span>
+            correo: contacto@elvaquero.com
+          </a>
+          <div class="pill-link">
+            <span class="icon">📍</span>
+            Yopal, Casanare, Colombia (ejemplo)
+          </div>
+        </div>
+
+        <p class="form-footnote">
+          *La venta se realiza &uacute;nicamente a mayores de edad y se confirma seg&uacute;n stock, ubicaci&oacute;n y fechas.
+        </p>
+      </div>
+
+      <div class="contact-block">
+        <h3>Formulario de inter&eacute;s</h3>
+        <form action="mailto:contacto@elvaquero.com" method="post" enctype="text/plain">
+          <div>
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="Nombre" type="text" placeholder="Tu nombre" required />
+          </div>
+          <div>
+            <label for="email">Correo electr&oacute;nico</label>
+            <input id="email" name="Correo" type="email" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+          <div>
+            <label for="productos-interes">Productos de inter&eacute;s</label>
+            <textarea id="productos-interes" name="Productos de interes" placeholder="- TORTA AFRICA 104T (2 unidades)
+- BENGALA VIP (10 unidades)
+- VOLCAN ARCOIRIS (4 unidades)"></textarea>
+          </div>
+          <div>
+            <label for="detalle-evento">Comentario adicional (evento, fecha, ciudad, etc.)</label>
+            <textarea id="detalle-evento" name="Detalles adicionales" placeholder="Ej: Fiesta de fin de año, espacio abierto, aprox. 80 personas."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar solicitud de informaci&oacute;n</button>
+          <p class="form-footnote">
+            El formulario abre tu cliente de correo con la informaci&oacute;n diligenciada. Tambi&eacute;n puedes copiar la lista de productos y pegarla en WhatsApp.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>&copy; <span id="year"></span> Pirot&eacute;cnicos El Vaquero. Uso exclusivo para mayores de edad.</span>
+    <span>Esta p&aacute;gina es informativa para clientes y no reemplaza las normas de seguridad oficiales.</span>
+  </footer>
+</main>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // ==============================================
+  // Catálogo de productos
+  // image: "img/nombre-archivo.jpg" -> pon aquí tus fotos
+  // youtubeId: "ID_DE_YOUTUBE" -> solo si tienes video demo
+  // ==============================================
+
+  const products = [
+    // Generales
+    {
+      name: "ANCHETA",
+      category: "otros",
+      price: 120000,
+      shots: null,
+      youtubeId: "",
+      image: "img/ancheta.jpeg"
+    },
+    {
+      name: "BARRIL DE CRACKER",
+      category: "otros",
+      price: 5000,
+      shots: null,
+      youtubeId: "ZdDxU5PRJRc",
+      image: "img/barril-cracker.jpeg"
+    },
+    {
+      name: "BENGALA VAQUERO",
+      category: "bengala",
+      price: 2000,
+      shots: null,
+      youtubeId: "",
+      image: "img/bengala.png"
+    },
+    {
+      name: "BENGALA VIP",
+      category: "bengala",
+      price: 30000,
+      shots: null,
+      youtubeId: "",
+      image: "img/bengala-vip.jpeg"
+    },
+    {
+      name: "BUSCAPIES",
+      category: "trueno",
+      price: 15000,
+      shots: null,
+      youtubeId: "",
+      image: ""
+    },
+    {
+      name: "CANDELA BATALLA DE FLORES 300T",
+      category: "otros",
+      price: 200000,
+      shots: 300,
+      youtubeId: "",
+      image: "img/candelas.jpg"
+    },
+    {
+      name: "CEBOLLITAS",
+      category: "trueno",
+      price: 6000,
+      shots: null,
+      youtubeId: "",
+      image: "img/cebollitas.jpg"
+    },
+    {
+      name: "CHAMPIÑON VOLADOR",
+      category: "otros",
+      price: 3000,
+      shots: null,
+      youtubeId: "",
+      image: "img/champiñon-volador.webp"
+    },
+    {
+      name: "CLACKY BOOM",
+      category: "trueno",
+      price: 12000,
+      shots: null,
+      youtubeId: "",
+      image: "img/clacky-boom.webp"
+    },
+    {
+      name: "COHETE LUNAR",
+      category: "cohete",
+      price: 7000,
+      shots: null,
+      youtubeId: "",
+      image: "img/Cohete-Lunar.jpeg"
+    },
+    {
+      name: "FUENTE CAMALEON",
+      category: "fuente",
+      price: 50000,
+      shots: null,
+      youtubeId: "",
+      image: "img/fuente-camaleon.webp"
+    },
+    {
+      name: "FUENTE CHUSCA",
+      category: "fuente",
+      price: 20000,
+      shots: null,
+      youtubeId: "",
+      image: "img/fuente-chusca.webp"
+    },
+    {
+      name: "FUENTE DE PLATA 35S 3M",
+      category: "fuente",
+      price: 45000,
+      shots: null,
+      youtubeId: "",
+      image: "img/fuente-plata.webp"
+    },
+    {
+      name: "FUENTE TRIANGULAR ORION",
+      category: "fuente",
+      price: 50000,
+      shots: null,
+      youtubeId: "",
+      image: "img/fuente-triangular.webp"
+    },
+    {
+      name: "GLOBOS DEL DESEO BIANGELI",
+      category: "otros",
+      price: 25000,
+      shots: null,
+      youtubeId: "",
+      image: "img/globos-deseo.jpg"
+    },
+    {
+      name: "METRALLETA 16T",
+      category: "metralleta",
+      price: 4000,
+      shots: null,
+      youtubeId: "",
+      image: "img/metralleta.png"
+    },
+    {
+      name: "METRALLETA X200T",
+      category: "metralleta",
+      price: 20000,
+      shots: 200,
+      youtubeId: "",
+      image: "img/metralleta-200t.jpeg"
+    }, 
+    {
+      name: "MISIL 25T",
+      category: "misil",
+      price: 20000,
+      shots: 25,
+      youtubeId: "",
+      image: "img/misil-25t.jpg"
+    },
+    {
+      name: "MISIL CARNAVALERO",
+      category: "misil",
+      price: 200000,
+      shots: null,
+      youtubeId: "",
+      image: "img/misil-carnavalero.jpg"
+    },
+    {
+      name: "MORTERO PALMERA",
+      category: "mortero",
+      price: 15000,
+      shots: null,
+      youtubeId: "",
+      image: "img/mortero-palmera.webp"
+    },
+    {
+      name: "PALMERA AEREO IMPORTADO",
+      category: "mortero",
+      price: 8000,
+      shots: null,
+      youtubeId: "",
+      image: ""
+    },
+    {
+      name: "VOLCAN ARCOIRIS",
+      category: "volcan",
+      price: 5000,
+      shots: null,
+      youtubeId: "",
+      image: "img/volcan-arcoiris.jpeg"
+    },
+    {
+      name: "VOLCAN BRILLANTE",
+      category: "volcan",
+      price: 10000,
+      shots: null,
+      youtubeId: "",
+      image: "img/volcan-brillante.png"
+    },
+    {
+      name: "VOLCANCITO",
+      category: "volcan",
+      price: 10000,
+      shots: null,
+      youtubeId: "",
+      image: "img/volcancito.png"
+    },
+    {
+      name: "VOLCAN N°4",
+      category: "volcan",
+      price: 8000,
+      shots: null,
+      youtubeId: "",
+      image: "img/volcan-n4.webp"
+    },
+
+    // Tortas (ejemplos, ajusta precios / fotos según tu lista real)
+    {
+      name: "TORTA AFRICA 104T",
+      category: "torta",
+      price: 320000,
+      shots: 104,
+      youtubeId: "",
+      image: "img/torta-africa-104t.jpeg"
+    },
+    {
+      name: "TORTA AFRODITA 25T",
+      category: "torta",
+      price: 120000,
+      shots: 25,
+      youtubeId: "",
+      image: "img/torta-afrodita-.jpeg"
+    },
+    {
+      name: "TORTA ANACONDA 100T",
+      category: "torta",
+      price: 450000,
+      shots: 100,
+      youtubeId: "",
+      image: "img/torta-anaconda.webp"
+    },
+    {
+      name: "TORTA ANGEL 19T",
+      category: "torta",
+      price: 70000,
+      shots: 19,
+      youtubeId: "",
+      image: "img/torta-angel.jpg"
+    },
+    {
+      name: "TORTA ANUBIS 25T",
+      category: "torta",
+      price: 80000,
+      shots: 25,
+      youtubeId: "",
+      image: ""
+    },
+    {
+      name: "TORTA AQUILES 16T",
+      category: "torta",
+      price: 55000,
+      shots: 16,
+      youtubeId: "",
+      image: "img/torta-aquiles-16t.jpeg"
+    },
+    {
+      name: "TORTA ARBOL DE PLATA 19T",
+      category: "torta",
+      price: 130000,
+      shots: 19,
+      youtubeId: "",
+      image: "img/arbol-plata.jpeg"
+    },
+    {
+      name: "TORTA ARGENTINA 15T",
+      category: "torta",
+      price: 100000,
+      shots: 15,
+      youtubeId: "",
+      image: "img/argentina.png"
+    },
+    {
+      name: "TORTA ASIA 104T",
+      category: "torta",
+      price: 320000,
+      shots: 104,
+      youtubeId: "",
+      image: "img/torta-asia-104t.jpg"
+    },
+    {
+      name: "TORTA ATILA 16T",
+      category: "torta",
+      price: 55000,
+      shots: 16,
+      youtubeId: "",
+      image: "img/torta-atila-16t.jpeg"
+    },
+    {
+      name: "TORTA BACANA 36T",
+      category: "torta",
+      price: 120000,
+      shots: 36,
+      youtubeId: "",
+      image: "img/torta-bacana-36t.webp"
+    },
+    {
+      name: "TORTA BALI 42T",
+      category: "torta",
+      price: 170000,
+      shots: 42,
+      youtubeId: "",
+      image: "img/torta-bali-42t.jpg"
+    },
+    {
+      name: "TORTA BERRIONDA 36T",
+      category: "torta",
+      price: 120000,
+      shots: 36,
+      youtubeId: "",
+      image: "img/torta-berrionda-36t.webp"
+    },
+    {
+      name: "TORTA BOLERO 16T",
+      category: "torta",
+      price: 45000,
+      shots: 16,
+      youtubeId: "",
+      image: "img/torta-bolero-16t.webp"
+    },
+    {
+      name: "TORTA BORA BORA 42T",
+      category: "torta",
+      price: 170000,
+      shots: 42,
+      youtubeId: "",
+      image: "img/torta-bora-bora-42t.webp"
+    },
+    {
+      name: "TORTA BRASIL 49T",
+      category: "torta",
+      price: 200000,
+      shots: 49,
+      youtubeId: "",
+      image: "img/torta-brasil-49t.webp"
+    },
+    {
+      name: "TORTA BULLICIOSA 49T",
+      category: "torta",
+      price: 350000,
+      shots: 49,
+      youtubeId: "",
+      image: "img/torta-bulliciosa-49t.jpg"
+    },
+    {
+      name: "TORTA CANDELAS MAGICAS CRACKER",
+      category: "torta",
+      price: 180000,
+      shots: null,
+      youtubeId: "",
+      image: "img/tortas-candelas-magicas-cracker.webp"
+    },
+    {
+      name: "TORTA CANDELAS MAGICAS MULTICOLOR",
+      category: "torta",
+      price: 180000,
+      shots: null,
+      youtubeId: "",
+      image: "img/Tortas-Candelas-Magicas-Perlas-160t.webp"
+    },
+    {
+      name: "TORTA CANTALETA 600T",
+      category: "torta",
+      price: 2500000,
+      shots: 600,
+      youtubeId: "",
+      image: "img/torta-cantaleta-600t.webp"
+    }
+  ];
+
+  const categoryLabels = {
+    torta: "Torta (batería)",
+    bengala: "Bengala",
+    volcan: "Volcán",
+    fuente: "Fuente",
+    misil: "Misil",
+    metralleta: "Metralleta",
+    cohete: "Cohete",
+    mortero: "Mortero / palmera",
+    trueno: "Trueno / sonido",
+    otros: "Producto"
+  };
+
+  const categoryFilter = document.getElementById("categoryFilter");
+  const shotsFilter = document.getElementById("shotsFilter");
+  const searchInput = document.getElementById("searchInput");
+  const productGrid = document.getElementById("productGrid");
+  const productosInteres = document.getElementById("productos-interes");
+
+  function formatPriceCOP(value) {
+    return value.toLocaleString("es-CO", {
+      style: "currency",
+      currency: "COP",
+      maximumFractionDigits: 0
+    });
+  }
+
+  function shotsMatch(product, filterValue) {
+    if (filterValue === "all") return true;
+    if (product.category !== "torta") return true; // filtro de tiros solo tortas
+    if (!product.shots && product.shots !== 0) return false;
+
+    const n = product.shots;
+    switch (filterValue) {
+      case "hasta25":
+        return n <= 25;
+      case "26a49":
+        return n >= 26 && n <= 49;
+      case "50a119":
+        return n >= 50 && n <= 119;
+      case "120plus":
+        return n >= 120;
+      default:
+        return true;
+    }
+  }
+
+  function renderProducts() {
+    const category = categoryFilter.value;
+    const shots = shotsFilter.value;
+    const term = searchInput.value.trim().toUpperCase();
+
+    const filtered = products.filter((p) => {
+      if (category !== "all" && p.category !== category) return false;
+      if (!shotsMatch(p, shots)) return false;
+      if (term && !p.name.toUpperCase().includes(term)) return false;
+      return true;
+    });
+
+    if (!filtered.length) {
+      productGrid.innerHTML = '<p class="no-results">No hay productos que coincidan con la b&uacute;squeda o los filtros.</p>';
+      return;
+    }
+
+    productGrid.innerHTML = filtered
+      .map((p) => {
+        const price = formatPriceCOP(p.price);
+        const categoryLabel = categoryLabels[p.category] || "Producto";
+        const shotsLabel = p.shots ? `${p.shots} tiros` : "";
+        return `
+          <article class="product-card" data-category="${p.category}">
+            <div class="product-card-inner">
+              ${
+                p.image
+                  ? `<div class="product-thumb">
+                       <img src="${p.image}" alt="${p.name}">
+                     </div>`
+                  : ""
+              }
+              <div class="product-header">
+                <span class="product-chip">${categoryLabel}</span>
+                ${shotsLabel ? `<span class="product-shots">${shotsLabel}</span>` : ""}
+              </div>
+              <h3 class="product-name">${p.name}</h3>
+              <div class="product-price">${price}</div>
+              <div class="product-badge-publico">Producto de venta al p&uacute;blico. Uso exclusivo para mayores de edad.</div>
+              <div class="product-actions">
+                ${
+                  p.youtubeId
+                    ? `<button class="btn-ghost js-video-btn" data-youtube="${p.youtubeId}">Ver demostraci&oacute;n</button>`
+                    : `<span class="product-no-video">Video demostraci&oacute;n (pr&oacute;ximamente)</span>`
+                }
+                <button class="btn-outline-small js-add-product" data-product="${p.name}">
+                  A&ntilde;adir a mi lista
+                </button>
+              </div>
+              ${
+                p.youtubeId
+                  ? `<div class="product-video" data-video-container></div>`
+                  : ""
+              }
+            </div>
+          </article>
+        `;
+      })
+      .join("");
+  }
+
+  function handleProductClick(event) {
+    const addBtn = event.target.closest(".js-add-product");
+    if (addBtn && productosInteres) {
+      const name = addBtn.dataset.product;
+      const lines = productosInteres.value
+        .split("\n")
+        .map((l) => l.trim())
+        .filter(Boolean);
+
+      if (!lines.some((l) => l.includes(name))) {
+        lines.push(`- ${name}`);
+        productosInteres.value = lines.join("\n");
+      }
+
+      document.getElementById("contacto").scrollIntoView({ behavior: "smooth" });
+    }
+
+    const videoBtn = event.target.closest(".js-video-btn");
+    if (videoBtn) {
+      const card = videoBtn.closest(".product-card");
+      const container = card.querySelector("[data-video-container]");
+      const youtubeId = videoBtn.dataset.youtube;
+      const productName = card.querySelector(".product-name")?.textContent || "Producto";
+
+      if (container && youtubeId) {
+        if (!container.dataset.loaded) {
+          container.innerHTML = `
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/${youtubeId}"
+                title="Demostraci&oacute;n de ${productName}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          `;
+          container.dataset.loaded = "true";
+        }
+        container.classList.toggle("visible");
+      }
+    }
+  }
+
+  categoryFilter.addEventListener("change", renderProducts);
+  shotsFilter.addEventListener("change", renderProducts);
+  searchInput.addEventListener("input", renderProducts);
+  productGrid.addEventListener("click", handleProductClick);
+
+  // Render inicial
+  renderProducts();
+</script>
+</body>
+</html>
